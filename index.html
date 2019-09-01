@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Load the latest version of TensorFlow.js -->
+    <script src="https://unpkg.com/@tensorflow/tfjs"></script>
+    <script src="https://unpkg.com/@tensorflow-models/mobilenet"></script>
+    <script src="https://unpkg.com/@tensorflow-models/knn-classifier"></script>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <title>Emojifier</title>
+  </head>
+  <body style="background: -webkit-linear-gradient(left, #0072ff, #00c6ff);">
+    <!-- As a link -->
+    <nav class="navbar navbar-inverse bg-dark">
+  	<a class="navbar-brand font-weight-bold" href="#">Emojifier</a>
+    </nav>
+    <br>
+    <div class="container mt-5">
+
+	<div class="card mx-auto text-white bg-dark mb-3" style="width: 24rem;">
+		<button class="btn btn-info text-dark" id="loading" type="button" disabled>
+		  <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+		  Loading Model...
+		</button>	
+		<br>
+  		<video autoplay playsinline muted id="webcam" class="card-img-top"  width="224" height="224"></video>
+  		<div class="card-body mx-auto">
+    			<button id="class-a" class="btn btn-primary">Thumb's Up</button>
+			<button id="class-b" class="btn btn-primary">Peace Out</button>
+			<button id="class-c" class="btn btn-primary">Wave</button>
+  		</div>
+		<span class="col-md-4 h5">Prediction</span>
+		<h5 class="col-md-auto mx-auto"id="console"></h5>
+	</div>
+</div>
+    	
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Load index.js after the content of the page -->
+    <script src="js/index.js"></script>
+  </body>
+</html>
